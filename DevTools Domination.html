@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    // console.log('yo');
+
+    // Interpolated
+    // console.log('namskar %s', 'mandali');
+
+    // Styled
+    // console.log('%c Good Morning', 'color: teal; font-size: 36px; font-family: helvetica nue');
+
+    // warning!
+    // console.warn('aankh dikhata hai madarjaat');
+
+    // Error :|
+    // console.error('gela tu aata');
+
+    // Info
+    // console.info('The first oranges were not orange (in colour)');
+
+    // Testing
+    // const p = document.querySelector('p');
+    // console.assert(p.classList.contains('soul'), 'it is heartless');
+
+    // clearing
+    // console.clear();
+
+    // Viewing DOM Elements
+    // console.log(p);
+    // console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`Hi this is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years mhatara`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+    console.count('smair');
+    console.count('aadi');
+    console.count('krishna');
+    console.count('smair');
+    console.count('aadi');
+    console.count('aadi');
+    console.count('krishna');
+
+    // timing
+
+  </script>
+</body>
+</html>
